@@ -1,0 +1,20 @@
+.Login {
+  .row {
+    .imgDiv {
+      img {
+        width: 400px;
+        height: 400px;
+      }
+    }
+    .formDiv {
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      height: 250px;
+      form {
+          input {
+              font-size: 12px;
+          }
+      }
+    }
+  }
+}

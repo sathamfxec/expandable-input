@@ -1,13 +1,308 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ===================
+Author: Satham Hussain
+Copyright 2022 satham
+Developed for Rocketlane Machine Test
+Swatch Colors
+#f5f5f5 -- Smokewhite
+====================== */
+
+/* resets and overrides
+====================== */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Roboto, Oxygen-sans, Ubuntu, Cantarell, "Helvitica Neue", sans-serif !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body * {
+	font-family: Roboto, Oxygen-sans, Ubuntu, Cantarell, "Helvitica Neue", sans-serif !important;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ul, li {
+	margin: 0 !important;
+}
+
+/* Link and type
+================ */
+a:hover, a:active, a:visited, a:link {text-decoration: none;}
+
+body {
+	font-size: 100%;
+}
+
+a, span {
+	display: inline-block;
+}
+
+/* main layout
+============== */
+header {
+	position: fixed;
+	width: 100%;
+	height: 44px;
+	top: 0;
+	background: black;
+	color: white;
+	font-weight: bold;
+	z-index: 1000;
+}
+
+aside {
+	position: fixed;
+	top: 44px;
+	height: 100%;
+	width: 16.66%;
+	box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12); 
+	background: smokewhite;
+}
+
+section {
+	position: relative;
+	top: 44px;
+	width: 100%;
+	z-index: 100;
+	padding-bottom: 40px;
+/*	box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+*/}
+
+footer {
+	position: fixed;
+	width: 100%;
+	height: 44px;
+	bottom: 0;
+	background: black;
+	color: white;
+	/* font-weight: bold; */
+    z-index: 1000;
+}
+
+/* secondary layout
+=================== */
+[class*="col-"]{
+	width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+	.col-s-1 {
+		width: 8.33%;
+	}
+	.col-s-2 {
+		width: 16.66%;
+	}
+	.col-s-3 {
+		width: 25%;
+	}
+	.col-s-4 {
+		width: 33.33%;
+	}
+	.col-s-5 {
+		width: 41.66%;
+	}
+	.col-s-6 {
+		width: 50%;
+	}
+	.col-s-7 {
+		width: 58.33%;
+	}
+	.col-s-8 {
+		width: 66.66%;
+	}
+	.col-s-9 {
+		width: 75%;
+	}
+	.col-s-10 {
+		width: 83.33%;
+	}
+	.col-s-11 {
+		width: 91.66%;
+	}
+	.col-s-12 {
+		width: 100%;
+	}
+	.mobile {
+		display: block;
+	}
+	.desktop {
+		display: none;
+	}
+	section {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.col-l-1 {
+		width: 8.33%;
+	}
+	.col-l-2 {
+		width: 16.66%;
+	}
+	.col-l-3 {
+		width: 25%;
+	}
+	.col-l-4 {
+		width: 33.33%;
+	}
+	.col-l-5 {
+		width: 41.66%;
+	}
+	.col-l-6 {
+		width: 50%;
+	}
+	.col-l-7 {
+		width: 58.33%;
+	}
+	.col-l-8 {
+		width: 66.66%;
+	}
+	.col-l-9 {
+		width: 75%;
+	}
+	.col-l-10 {
+		width: 83.33%;
+	}
+	.col-l-11 {
+		width: 91.66%;
+	}
+	.col-l-12 {
+		width: 100%;
+	}
+	.mobile {
+		display: none;
+	}
+	.desktop {
+		display: block;
+	}
+	section {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.mobile {
+		display: block;
+	}
+	.desktop {
+		display: none;
+	}
+	section {
+		left: 0;
+		width: 100%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1025px) {
+	.mobile {
+		display: none;
+	}
+	.desktop {
+		display: block;
+	}
+}
+
+/* form elements
+================ */
+input {}
+label {
+	font-size: 12px;
+}
+button {
+	font-size: 12px !important;
+}
+
+/* mischellaneous
+================= */
+.defaultFS {
+	font-size: 12px !important;
+}
+.fwB {
+	font-weight: bold;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.txtCenter {
+	text-align: center;
+}
+.txtRight {
+	text-align: right;
+}
+.txtLeft {
+	text-align: left;
+}
+.flex-jc {
+	display: flex;
+	justify-content: center;
+}
+.flex-ai {
+	display: flex;
+	align-items: center;
+}
+.flex-sb {
+	display: flex;
+	justify-content: space-between;
+}
+.marginZero {
+	margin: 0;
+}
+.marginRZero {
+	margin-right: 0;
+}
+.marginLZero {
+	margin-left: 0;
+}
+.marginBZero {
+	margin-bottom: 0 !important;
+}
+.marginTZero {
+	margin-top: 0;
+}
+.paddingZero {
+	padding: 0;
+}
+.paddingRZero {
+	padding-right: 0;
+}
+.paddingLZero {
+	padding-left: 0;
+}
+.paddingBZero {
+	padding-bottom: 0;
+}
+.paddingTZero {
+	padding-top: 0;
+}
+.mandatory, .error {
+	color: red;
+	font-size: 12px;
+}
+.success {
+	color: green;
+	font-size: 12px;
+}
+.welcome {
+	color: darkgreen;
+    font-weight: bold;
+    font-size: 13px;
+}
+header nav ul li {
+	padding-left: 10px;
+}
+section .container {
+	position: relative;
+    left: 16.66%;
+    width: auto;
+    padding: 10px;
+    margin: 0;
 }
